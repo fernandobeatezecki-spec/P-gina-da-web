@@ -1,22 +1,6 @@
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-</head>
-<style
-    <h1>curiosidades sobre a seleção brasileira</h1>
-    <p> Hoje vou passar algumas informações sobre a seleção brasileira</p>
-   
-    <h2>A seleção brasileira é a maior seleção do mundo<h2>
-    </p>Sejam bem-vindos hoje eu irei compartilhar iformações sobre a seleção brasileira </p>
-</body>
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,7 +35,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
         }
 
         .logo {
@@ -88,14 +72,21 @@
         /* HERO */
         .hero {
             min-height: 85vh;
+
             background:
-                linear-gradient(rgba(0, 80, 30, 0.75), rgba(0, 40, 15, 0.8)),
+                linear-gradient(
+                    rgba(0, 80, 30, 0.75),
+                    rgba(0, 40, 15, 0.8)
+                ),
                 url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1600&q=80");
+
             background-size: cover;
             background-position: center;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             text-align: center;
             color: white;
             padding: 30px;
@@ -165,7 +156,7 @@
         .historia img {
             width: 100%;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         }
 
         .historia-texto p {
@@ -190,7 +181,7 @@
             padding: 25px;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: 0.3s;
         }
 
@@ -224,7 +215,7 @@
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
             transition: 0.3s;
         }
 
@@ -250,6 +241,7 @@
 
         .jogador-info p {
             color: #666;
+            line-height: 1.5;
         }
 
         /* CURIOSIDADES */
@@ -262,6 +254,10 @@
             color: #ffdf00;
         }
 
+        .curiosidades .titulo p {
+            color: white;
+        }
+
         .curiosidades-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -269,7 +265,7 @@
         }
 
         .curiosidade {
-            background: rgba(255,255,255,0.12);
+            background: rgba(255, 255, 255, 0.12);
             padding: 30px;
             border-radius: 15px;
             text-align: center;
@@ -289,12 +285,64 @@
             line-height: 1.6;
         }
 
-        /* FOOTER */
+        /* LIKE E DISLIKE */
+        .avaliacao {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .avaliacao h2 {
+            color: #009c3b;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .avaliacao p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .avaliacao button {
+            border: none;
+            padding: 14px 28px;
+            margin: 5px;
+            border-radius: 30px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #likeBtn {
+            background: #009c3b;
+            color: white;
+        }
+
+        #dislikeBtn {
+            background: #d62828;
+            color: white;
+        }
+
+        .avaliacao button:hover {
+            transform: scale(1.08);
+            opacity: 0.9;
+        }
+
+        .avaliacao button:active {
+            transform: scale(0.95);
+        }
+
+        /* RODAPÉ */
         footer {
             background: #002d13;
             color: white;
             text-align: center;
             padding: 30px;
+        }
+
+        footer p {
+            margin: 8px;
         }
 
         footer strong {
@@ -315,7 +363,8 @@
             font-size: 22px;
             cursor: pointer;
             display: none;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            z-index: 999;
         }
 
         #topo:hover {
@@ -325,6 +374,7 @@
 
         /* RESPONSIVIDADE */
         @media (max-width: 900px) {
+
             .cards {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -339,6 +389,7 @@
         }
 
         @media (max-width: 600px) {
+
             header {
                 flex-direction: column;
                 gap: 15px;
@@ -367,6 +418,12 @@
             section {
                 padding: 50px 5%;
             }
+
+            .avaliacao button {
+                display: block;
+                width: 220px;
+                margin: 10px auto;
+            }
         }
     </style>
 </head>
@@ -375,6 +432,7 @@
 
     <!-- CABEÇALHO -->
     <header>
+
         <div class="logo">
             <div class="bola">⚽</div>
             <h1>Seleção Brasileira</h1>
@@ -389,11 +447,15 @@
                 <li><a href="#curiosidades">Curiosidades</a></li>
             </ul>
         </nav>
+
     </header>
+
 
     <!-- INÍCIO -->
     <section class="hero" id="inicio">
+
         <div class="hero-content">
+
             <h2>🇧🇷 Rumo à Glória!</h2>
 
             <p>
@@ -401,16 +463,28 @@
                 da Seleção Brasileira de Futebol.
             </p>
 
-            <a href="#historia" class="btn">Conhecer a Seleção</a>
+            <a href="#historia" class="btn">
+                Conhecer a Seleção
+            </a>
+
         </div>
+
     </section>
+
 
     <!-- HISTÓRIA -->
     <section id="historia">
+
         <div class="titulo">
+
             <h2>História da Seleção</h2>
-            <p>Uma das seleções mais tradicionais do futebol mundial.</p>
+
+            <p>
+                Uma das seleções mais tradicionais do futebol mundial.
+            </p>
+
         </div>
+
 
         <div class="historia">
 
@@ -418,7 +492,9 @@
                 src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1000&q=80"
                 alt="Futebol">
 
+
             <div class="historia-texto">
+
                 <p>
                     A Seleção Brasileira é uma das equipes mais importantes
                     da história do futebol. O Brasil conquistou a Copa do
@@ -437,180 +513,353 @@
                     mais conhecidos do esporte mundial.
                 </p>
 
-                <a href="#titulos" class="btn">Ver títulos</a>
+                <a href="#titulos" class="btn">
+                    Ver títulos
+                </a>
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- TÍTULOS -->
     <section class="titulos" id="titulos">
 
         <div class="titulo">
+
             <h2>Principais Títulos</h2>
-            <p>Grandes conquistas da Seleção Brasileira.</p>
+
+            <p>
+                Grandes conquistas da Seleção Brasileira.
+            </p>
+
         </div>
+
 
         <div class="cards">
 
             <div class="card">
+
                 <div class="trofeu">🏆</div>
+
                 <h3>5</h3>
-                <p>Copas do Mundo</p>
+
+                <p>
+                    Copas do Mundo
+                </p>
+
             </div>
 
+
             <div class="card">
+
                 <div class="trofeu">🥇</div>
+
                 <h3>9</h3>
-                <p>Copa América</p>
+
+                <p>
+                    Copa América
+                </p>
+
             </div>
 
+
             <div class="card">
+
                 <div class="trofeu">🏅</div>
+
                 <h3>4</h3>
-                <p>Copa das Confederações</p>
+
+                <p>
+                    Copa das Confederações
+                </p>
+
             </div>
 
+
             <div class="card">
+
                 <div class="trofeu">🥇</div>
+
                 <h3>2</h3>
-                <p>Medalhas de Ouro Olímpicas</p>
+
+                <p>
+                    Medalhas de Ouro Olímpicas
+                </p>
+
             </div>
 
+
             <div class="card">
+
                 <div class="trofeu">🇧🇷</div>
+
                 <h3>1</h3>
-                <p>País do Futebol</p>
+
+                <p>
+                    País do Futebol
+                </p>
+
             </div>
 
         </div>
+
     </section>
+
 
     <!-- JOGADORES -->
     <section id="jogadores">
 
         <div class="titulo">
+
             <h2>Ídolos Brasileiros</h2>
-            <p>Alguns dos maiores nomes que vestiram a camisa do Brasil.</p>
+
+            <p>
+                Alguns dos maiores nomes que vestiram a camisa do Brasil.
+            </p>
+
         </div>
+
 
         <div class="jogadores">
 
+
+            <!-- PELÉ -->
             <div class="jogador">
+
                 <img
                     src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80"
                     alt="Jogador de futebol">
 
                 <div class="jogador-info">
+
                     <h3>Pelé</h3>
+
                     <p>
                         Considerado um dos maiores jogadores da história,
                         Pelé conquistou três Copas do Mundo com o Brasil.
                     </p>
+
                 </div>
+
             </div>
 
+
+            <!-- RONALDO -->
             <div class="jogador">
+
                 <img
                     src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=800&q=80"
                     alt="Jogador de futebol">
 
                 <div class="jogador-info">
+
                     <h3>Ronaldo</h3>
+
                     <p>
                         O Fenômeno foi um dos grandes atacantes da história
                         e campeão mundial com o Brasil.
                     </p>
+
                 </div>
+
             </div>
 
+
+            <!-- RONALDINHO -->
             <div class="jogador">
+
                 <img
                     src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80"
                     alt="Jogador de futebol">
 
                 <div class="jogador-info">
+
                     <h3>Ronaldinho</h3>
+
                     <p>
                         Conhecido pela criatividade, dribles e habilidade,
                         Ronaldinho marcou uma geração de torcedores.
                     </p>
+
                 </div>
+
             </div>
 
         </div>
+
     </section>
+
 
     <!-- CURIOSIDADES -->
     <section class="curiosidades" id="curiosidades">
 
         <div class="titulo">
+
             <h2>Curiosidades 🇧🇷</h2>
-            <p>Alguns fatos interessantes sobre o Brasil.</p>
+
+            <p>
+                Alguns fatos interessantes sobre o Brasil.
+            </p>
+
         </div>
+
 
         <div class="curiosidades-grid">
 
+
             <div class="curiosidade">
+
                 <span>⭐</span>
+
                 <h3>Maior campeão</h3>
+
                 <p>
-                    O Brasil é o país que mais vezes conquistou a Copa do Mundo.
+                    O Brasil é o país que mais vezes conquistou
+                    a Copa do Mundo.
                 </p>
+
             </div>
 
+
             <div class="curiosidade">
+
                 <span>👕</span>
+
                 <h3>Camisa Amarela</h3>
+
                 <p>
-                    A tradicional camisa amarela é um dos uniformes mais
-                    reconhecidos do futebol.
+                    A tradicional camisa amarela é um dos uniformes
+                    mais reconhecidos do futebol.
                 </p>
+
             </div>
 
+
             <div class="curiosidade">
+
                 <span>⚽</span>
+
                 <h3>Futebol Arte</h3>
+
                 <p>
                     O futebol brasileiro é conhecido mundialmente pela
                     criatividade e habilidade de seus jogadores.
                 </p>
+
             </div>
 
         </div>
+
     </section>
 
-    <!-- RODAPÉ -->
-    <footer>silei
+
+    <!-- LIKE E DISLIKE -->
+    <section class="avaliacao">
+
+        <h2>Você gostou do site? 🇧🇷</h2>
+
         <p>
-            🇧🇷 <strong>Seleção Brasileira</strong> — Paixão que atravessa gerações.
+            Deixe sua avaliação!
+        </p>
+
+
+        <button id="likeBtn" onclick="darLike()">
+            👍 Like
+            <span id="likeCount">0</span>
+        </button>
+
+
+        <button id="dislikeBtn" onclick="darDislike()">
+            👎 Dislike
+            <span id="dislikeCount">0</span>
+        </button>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>
+            🇧🇷 <strong>Seleção Brasileira</strong>
+            — Paixão que atravessa gerações.
         </p>
 
         <p>
             Site desenvolvido em HTML, CSS e JavaScript.
         </p>
+
     </footer>
 
-    <!-- BOTÃO VOLTAR AO TOPO -->
-    <button id="topo" onclick="voltarAoTopo()">↑</button>
 
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button id="topo" onclick="voltarAoTopo()">
+        ↑
+    </button>
+
+
+    <!-- JAVASCRIPT -->
     <script>
+
+        // BOTÃO VOLTAR AO TOPO
+
         const botaoTopo = document.getElementById("topo");
 
         window.addEventListener("scroll", function () {
+
             if (window.scrollY > 400) {
+
                 botaoTopo.style.display = "block";
+
             } else {
+
                 botaoTopo.style.display = "none";
+
             }
+
         });
 
+
         function voltarAoTopo() {
+
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
+
         }
+
+
+        // LIKE E DISLIKE
+
+        let likes = 0;
+        let dislikes = 0;
+
+
+        function darLike() {
+
+            likes++;
+
+            document.getElementById("likeCount").textContent = likes;
+
+        }
+
+
+        function darDislike() {
+
+            dislikes++;
+
+            document.getElementById("dislikeCount").textContent = dislikes;
+
+        }
+
     </script>
 
 </body>
+
 </html>
+
+  
